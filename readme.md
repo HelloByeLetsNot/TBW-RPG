@@ -2,6 +2,7 @@
 
 This is a simple text-based RPG game implemented in HTML, CSS, and JavaScript. The game allows players to explore different areas, interact with NPCs, and engage in battles.
 
+![Game Screenshot](https://raw.githubusercontent.com/HelloByeLetsNot/TBW-RPG/main/Screenshot_20240523-183917.png)
 
 ## How to Play
 
