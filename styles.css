@@ -130,16 +130,16 @@ body {
 
 #inventory-header {
   padding: 10px;
-  cursor: pointer;
   background-color: #1e2a38;
   border: 1px solid #89c4f4;
   margin-top: 10px;
   color: #89c4f4;
   width: 100%;
+  text-align: center;
 }
 
 #inventory-content {
-  display: none;
+  display: block;
   border: 1px solid #89c4f4;
   padding: 10px;
   background-color: #2c3e50;
@@ -188,6 +188,10 @@ body {
   background-color: #1e2a38;
   border: 1px solid #89c4f4;
   margin-top: 5px;
+}
+
+.content.always-visible {
+  display: block !important;
 }
 
 @media (max-width: 599px) {

@@ -47,6 +47,36 @@ app.post('/leaderboard', (req, res) => {
     });
 });
 
+app.get('/locations', (req, res) => {
+    fs.readFile('locations.json', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading locations data');
+            return;
+        }
+        try {
+            const locations = JSON.parse(data);
+            res.json(locations);
+        } catch (parseErr) {
+            res.status(500).send('Error parsing locations data');
+        }
+    });
+});
+
+app.get('/npcs', (req, res) => {
+    fs.readFile('npcs.json', (err, data) => {
+        if (err) {
+            res.status(500).send('Error reading NPCs data');
+            return;
+        }
+        try {
+            const npcs = JSON.parse(data);
+            res.json(npcs);
+        } catch (parseErr) {
+            res.status(500).send('Error parsing NPCs data');
+        }
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

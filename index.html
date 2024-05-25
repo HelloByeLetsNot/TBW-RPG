@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Login Popup -->
     <div id="login-popup" class="popup">
         <div class="popup-content">
             <h2>Login</h2>
@@ -16,7 +15,7 @@
     </div>
 
     <div id="game-container" style="display: none;">
-        <div id="sidebar" class="side-panel">
+        <div id="left-sidebar" class="side-panel">
             <button class="collapsible">Commands</button>
             <div class="content">
                 <ul>
@@ -28,12 +27,17 @@
                     <li><strong>buy [item]</strong> - Buy an item from the merchant</li>
                     <li><strong>sell</strong> - Sell an item to the merchant</li>
                     <li><strong>leave</strong> - Leave the merchant's stall</li>
+                    <li><strong>inventory</strong> - Show the items you have</li>
                     <li><strong>help</strong> - List the description of things you can do and that can happen</li>
                     <li><strong>end</strong> - End your game session and save your score</li>
                 </ul>
             </div>
+            <button class="collapsible">Leaderboard</button>
+            <div class="content">
+                <div id="leaderboard-content">Leaderboard content goes here.</div>
+            </div>
         </div>
-        <div id="main">
+        <div id="main-content">
             <div id="output-container">
                 <div id="hp-bar">
                     <div id="hp-bar-inner">100 HP</div>
@@ -46,14 +50,6 @@
                     <input type="text" id="input" placeholder="Enter your command...">
                     <button id="enter-button">Enter</button>
                 </div>
-                <div id="inventory-header">Inventory</div>
-                <div id="inventory-content"></div>
-            </div>
-        </div>
-        <div id="leaderboard" class="side-panel">
-            <button class="collapsible">Leaderboard</button>
-            <div class="content">
-                <div id="leaderboard-content">Leaderboard content goes here.</div>
             </div>
         </div>
     </div>
