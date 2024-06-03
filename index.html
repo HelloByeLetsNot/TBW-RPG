@@ -2,58 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Text-Based RPG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Based RPG Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="login-popup" class="popup">
-        <div class="popup-content">
-            <h2>Login</h2>
-            <input type="text" id="username" placeholder="Enter your username">
-            <button id="login-button">Login</button>
-        </div>
+        <h2>Enter your username</h2>
+        <input type="text" id="username" placeholder="Username">
+        <button id="login-button">Login</button>
     </div>
-
-    <div id="game-container" style="display: none;">
-        <div id="left-sidebar" class="side-panel">
-            <button class="collapsible">Commands</button>
-            <div class="content">
-                <ul>
-                    <li><strong>go [direction]</strong> - Move in a specified direction (north, south, east, west)</li>
-                    <li><strong>explore</strong> - Explore the current area for NPCs or other interactions</li>
-                    <li><strong>attack [npc]</strong> - Attack a specific NPC</li>
-                    <li><strong>attack</strong> - Attack the current NPC</li>
-                    <li><strong>trade merchant</strong> - Trade with the merchant NPC</li>
-                    <li><strong>buy [item]</strong> - Buy an item from the merchant</li>
-                    <li><strong>sell</strong> - Sell an item to the merchant</li>
-                    <li><strong>leave</strong> - Leave the merchant's stall</li>
-                    <li><strong>inventory</strong> - Show the items you have</li>
-                    <li><strong>help</strong> - List the description of things you can do and that can happen</li>
-                    <li><strong>end</strong> - End your game session and save your score</li>
-                </ul>
+    <div id="game-container" class="game-container" style="display: none;">
+        <div id="output" class="output"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Enter command">
+            <button id="enter-button">Enter</button>
+        </div>
+        <div class="hp-bar-container">
+            <div id="hp-bar-inner" class="hp-bar-inner"></div>
+        </div>
+        <div id="npc-hp-bar" class="npc-hp-bar" style="display: none;">
+            <div id="npc-hp-bar-inner" class="npc-hp-bar-inner"></div>
+        </div>
+        <div class="button-container">
+            <button id="attack-button">Attack</button>
+            <button id="flee-button">Flee</button>
+            <button id="explore-button">Explore</button>
+        </div>
+        <div class="directional-buttons">
+            <button id="north-button">^</button>
+            <div class="horizontal-buttons">
+                <button id="west-button"><</button>
+                <button id="east-button">></button>
             </div>
+            <button id="south-button">v</button>
+        </div>
+        <div id="leaderboard" class="collapsible">
             <button class="collapsible">Leaderboard</button>
-            <div class="content">
-                <div id="leaderboard-content">Leaderboard content goes here.</div>
-            </div>
-        </div>
-        <div id="main-content">
-            <div id="output-container">
-                <div id="hp-bar">
-                    <div id="hp-bar-inner">100 HP</div>
-                </div>
-                <div id="npc-hp-bar">
-                    <div id="npc-hp-bar-inner"></div>
-                </div>
-                <div id="output"></div>
-                <div id="input-container">
-                    <input type="text" id="input" placeholder="Enter your command...">
-                    <button id="enter-button">Enter</button>
-                </div>
-            </div>
+            <div id="leaderboard-content" class="collapsible-content"></div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

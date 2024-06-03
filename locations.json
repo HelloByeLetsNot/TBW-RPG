@@ -1,75 +1,125 @@
 {
-    "forest": {
-        "description": "A dense forest with towering trees and thick underbrush.",
-        "npcs": ["goblin", "wolf"],
-        "exits": {
-            "north": "mountain",
-            "south": "village",
-            "east": "lake",
-            "west": "cave"
+    "map1": {
+        "forest": {
+            "description": "You are in a dense forest.",
+            "exits": {
+                "north": "map2:mountains",
+                "east": "map3:plains",
+                "south": "map4:river",
+                "west": "map5:desert"
+            },
+            "npcs": ["goblin", "wolf"]
         }
     },
-    "village": {
-        "description": "A small village with friendly inhabitants.",
-        "npcs": ["villager", "merchant"],
-        "exits": {
-            "north": "forest"
+    "map2": {
+        "mountains": {
+            "description": "You are at the base of towering mountains.",
+            "exits": {
+                "south": "map1:forest",
+                "east": "map6:cave"
+            },
+            "npcs": ["troll", "eagle"]
         }
     },
-    "cave": {
-        "description": "A dark cave that echoes with unknown sounds.",
-        "npcs": ["bat", "troll"],
-        "exits": {
-            "east": "forest"
+    "map3": {
+        "plains": {
+            "description": "You are on wide open plains.",
+            "exits": {
+                "west": "map1:forest",
+                "east": "map7:village"
+            },
+            "npcs": ["horse", "farmer"]
         }
     },
-    "mountain": {
-        "description": "A tall mountain with a treacherous path.",
-        "npcs": ["eagle", "yeti"],
-        "exits": {
-            "south": "forest"
+    "map4": {
+        "river": {
+            "description": "You are by a rushing river.",
+            "exits": {
+                "north": "map1:forest",
+                "south": "map8:lake"
+            },
+            "npcs": ["fish", "frog"]
         }
     },
-    "lake": {
-        "description": "A serene lake with clear water.",
-        "npcs": ["fish", "water_sprite"],
-        "exits": {
-            "west": "forest"
+    "map5": {
+        "desert": {
+            "description": "You are in a vast, hot desert.",
+            "exits": {
+                "east": "map1:forest"
+            },
+            "npcs": ["scorpion", "snake"]
         }
     },
-    "desert": {
-        "description": "A vast desert with scorching heat.",
-        "npcs": ["scorpion", "sandworm"],
-        "exits": {
-            "north": "ruins"
+    "map6": {
+        "cave": {
+            "description": "You are in a dark, damp cave.",
+            "exits": {
+                "west": "map2:mountains",
+                "south": "map9:lake"
+            },
+            "npcs": ["bat", "spider"]
         }
     },
-    "swamp": {
-        "description": "A murky swamp with thick mud.",
-        "npcs": ["frog", "swamp_monster"],
-        "exits": {
-            "east": "meadow"
+    "map7": {
+        "village": {
+            "description": "You are in a small, quiet village.",
+            "exits": {
+                "west": "map3:plains",
+                "east": "map10:market"
+            },
+            "npcs": ["villager", "merchant"]
         }
     },
-    "ruins": {
-        "description": "Ancient ruins filled with mystery.",
-        "npcs": ["ghost", "skeleton"],
-        "exits": {
-            "south": "desert"
+    "map8": {
+        "lake": {
+            "description": "You are by a serene lake.",
+            "exits": {
+                "north": "map4:river"
+            },
+            "npcs": ["fish", "frog"]
         }
     },
-    "meadow": {
-        "description": "A peaceful meadow with colorful flowers.",
-        "npcs": ["rabbit", "deer"],
-        "exits": {
-            "west": "swamp"
+    "map9": {
+        "lake": {
+            "description": "You are by a serene lake.",
+            "exits": {
+                "north": "map6:cave",
+                "west": "map10:river"
+            },
+            "npcs": ["fish", "frog"]
         }
     },
-    "castle": {
-        "description": "An abandoned castle with crumbling walls.",
-        "npcs": ["knight", "dragon"],
-        "exits": {
-            "north": "village"
+    "map10": {
+        "market": {
+            "description": "You are in a bustling market.",
+            "exits": {
+                "west": "map7:village",
+                "north": "map11:square",
+                "south": "map12:harbor"
+            },
+            "npcs": ["merchant", "shopper"]
+        },
+        "square": {
+            "description": "You are in a busy town square.",
+            "exits": {
+                "south": "market",
+                "east": "castle"
+            },
+            "npcs": ["guard", "jester"]
+        },
+        "castle": {
+            "description": "You are in a grand castle.",
+            "exits": {
+                "west": "square"
+            },
+            "npcs": ["king", "knight"]
+        },
+        "harbor": {
+            "description": "You are at a busy harbor.",
+            "exits": {
+                "north": "market"
+            },
+            "npcs": ["sailor", "fishmonger"]
         }
     }
 }
